@@ -7,7 +7,9 @@ import {
   CupSoda,
   HeartHandshake,
   Home,
+  Clock,
   MapPin,
+  Phone,
   Sandwich,
   Soup,
   Sparkles,
@@ -17,12 +19,21 @@ import {
 export const business = {
   name: "Pão Quente Duarte Silva",
   shortName: "Duarte Silva",
-  location: "Avenida Rainha Santa Isabel, Pataias",
+  location: "Av. Rainha Santa Isabel 113, Pataias",
   email: "geral@paoquenteduartesilva.pt",
-  phone: "+351 244 000 000",
-  hours: "Segunda a Sábado: 07:00 - 19:30",
+  phone: "+351 244 580 434",
   tagline: "Pão fresco, café quente e conversas de bairro.",
 };
+
+export const openingHours = [
+  { day: "Segunda-feira", hours: "06:00-19:30" },
+  { day: "Terça-feira", hours: "06:00-19:30" },
+  { day: "Quarta-feira", hours: "06:00-19:30" },
+  { day: "Quinta-feira", hours: "06:00-19:30" },
+  { day: "Sexta-feira", hours: "06:00-19:30" },
+  { day: "Sábado", hours: "06:00-19:30" },
+  { day: "Domingo", hours: "07:00-19:30" },
+];
 
 export const navigation = [
   { label: "Início", href: "/" },
@@ -261,6 +272,6 @@ export const team = [
 export const contactDetails = [
   { label: "Morada", value: business.location, icon: MapPin },
   { label: "Email", value: business.email, icon: Bean },
-  { label: "Telefone", value: business.phone, icon: Coffee },
-  { label: "Horario", value: business.hours, icon: Wheat },
+  { label: "Telefone", value: business.phone, icon: Phone },
+  { label: "Horario", value: openingHours, icon: Clock },
 ];
