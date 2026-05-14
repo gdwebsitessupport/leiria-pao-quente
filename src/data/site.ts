@@ -29,5 +29,8 @@ export const images = {
     "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&q=85&w=900",
 };
 
-export const directionsHref =
-  "https://www.google.com/maps/search/?api=1&query=Av.%20Rainha%20Santa%20Isabel%20113%2C%20Pataias";
+export const businessAddress = "Av. Rainha Santa Isabel 113, Pataias";
+const encodedBusinessAddress = encodeURIComponent(businessAddress);
+
+export const directionsHref = `https://www.google.com/maps/search/?api=1&query=${encodedBusinessAddress}`;
+export const googleMapsEmbedHref = `https://www.google.com/maps?q=${encodedBusinessAddress}&output=embed`;

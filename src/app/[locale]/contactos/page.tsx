@@ -3,7 +3,7 @@ import { Clock, Mail, MapPin, MessageCircle, Navigation, Phone } from "lucide-re
 import type { LucideIcon } from "lucide-react";
 import { MotionSection } from "@/components/MotionSection";
 import { PageHero } from "@/components/PageHero";
-import { directionsHref, images } from "@/data/site";
+import { businessAddress, directionsHref, googleMapsEmbedHref, images } from "@/data/site";
 import { getDictionary, getValidLocale } from "@/i18n/dictionaries";
 import { getLocalizedAlternates } from "@/i18n/metadata";
 
@@ -56,7 +56,8 @@ export default async function ContactosPage({ params }: LocalePageProps) {
       />
 
       <MotionSection className="bg-flour px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="mx-auto grid max-w-7xl gap-6">
+          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <article className="rounded-[2rem] bg-ink p-8 text-cream shadow-[0_24px_70px_rgba(33,25,20,0.18)] sm:p-10 lg:p-12">
             <p className="inline-flex items-center gap-2 rounded-full border border-honey/40 bg-white/8 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.22em] text-honey">
               <MapPin className="h-4 w-4" aria-hidden="true" />
@@ -121,6 +122,38 @@ export default async function ContactosPage({ params }: LocalePageProps) {
                 </div>
               ))}
             </dl>
+          </article>
+          </div>
+
+          <article className="overflow-hidden rounded-[2rem] border border-honey/35 bg-cream shadow-[0_24px_70px_rgba(33,25,20,0.08)]">
+            <div className="border-b border-honey/35 px-8 py-6 sm:px-10">
+              <h2 className="font-serif text-3xl font-bold leading-tight text-ink text-balance md:text-4xl">
+                Google Maps
+              </h2>
+              <p className="mt-2 text-sm font-medium text-caramel/90">
+                {dictionary.business.location}
+              </p>
+            </div>
+            <div className="relative h-0 w-full pb-[62%] sm:pb-[50%] lg:pb-[42%]">
+              <iframe
+                title={`Google Maps - ${businessAddress}`}
+                src={googleMapsEmbedHref}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 h-full w-full border-0"
+                allowFullScreen
+              />
+            </div>
+            <div className="px-8 py-5 sm:px-10">
+              <a
+                href={directionsHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-11 items-center justify-center rounded-full border border-honey/55 bg-white px-5 py-2 text-sm font-extrabold uppercase tracking-[0.16em] text-caramel transition hover:bg-honey hover:text-ink"
+              >
+                {page.actions[0]?.label ?? "Google Maps"}
+              </a>
+            </div>
           </article>
         </div>
       </MotionSection>
