@@ -1,7 +1,15 @@
 import Link from "next/link";
-import { business, navigation } from "@/data/site";
+import type { Dictionary } from "@/i18n/messages/pt";
+import { localizePath, type Locale } from "@/i18n/routing";
 
-export function Footer() {
+type FooterProps = {
+  business: Dictionary["business"];
+  labels: Dictionary["shell"];
+  locale: Locale;
+  navigation: Dictionary["navigation"];
+};
+
+export function Footer({ business, labels, locale, navigation }: FooterProps) {
   return (
     <footer className="bg-ink text-cream">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
@@ -15,7 +23,7 @@ export function Footer() {
                 {business.shortName}
               </span>
               <span className="text-xs font-bold uppercase tracking-[0.24em] text-cream/60">
-                Padaria e Café
+                {labels.footerBrandKicker}
               </span>
             </span>
           </div>
@@ -24,13 +32,13 @@ export function Footer() {
 
         <div>
           <h3 className="mb-4 text-sm font-extrabold uppercase tracking-[0.22em] text-honey">
-            Páginas
+            {labels.pagesHeading}
           </h3>
           <ul className="grid gap-2">
             {navigation.map((item) => (
               <li key={item.href}>
                 <Link
-                  href={item.href}
+                  href={localizePath(item.href, locale)}
                   className="text-cream/72 transition hover:text-honey"
                 >
                   {item.label}
@@ -42,12 +50,12 @@ export function Footer() {
 
         <div>
           <h3 className="mb-4 text-sm font-extrabold uppercase tracking-[0.22em] text-honey">
-            Contactos
+            {labels.contactsHeading}
           </h3>
           <div className="space-y-3 text-cream/72">
             <p>{business.email}</p>
             <p>{business.phone}</p>
-            <p>{business.hours}</p>
+            <p>{business.location}</p>
           </div>
         </div>
       </div>

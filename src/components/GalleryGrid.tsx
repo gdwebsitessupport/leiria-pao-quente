@@ -2,12 +2,18 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { gallery } from "@/data/site";
 
-export function GalleryGrid() {
+type GalleryGridProps = {
+  items: readonly {
+    title: string;
+    image: string;
+  }[];
+};
+
+export function GalleryGrid({ items }: GalleryGridProps) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      {gallery.map((item, index) => (
+      {items.map((item, index) => (
         <motion.figure
           key={item.title}
           className={`group relative overflow-hidden rounded-[1.5rem] bg-ink ${

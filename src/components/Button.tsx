@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Sparkles } from "lucide-react";
 import type { ReactNode } from "react";
+import { defaultLocale, isLocale, localizePath } from "@/i18n/routing";
 
 type ButtonProps = {
   href: string;
@@ -34,11 +36,13 @@ export function Button({
   iconName = "arrow",
 }: ButtonProps) {
   const Icon = icons[iconName];
+  const params = useParams<{ locale?: string }>();
+  const locale = params.locale && isLocale(params.locale) ? params.locale : defaultLocale;
 
   return (
     <motion.div whileHover={{ y: -2, scale: 1.01 }} whileTap={{ scale: 0.98 }}>
       <Link
-        href={href}
+        href={localizePath(href, locale)}
         className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold uppercase tracking-[0.14em] transition ${variants[variant]}`}
       >
         <span>{children}</span>

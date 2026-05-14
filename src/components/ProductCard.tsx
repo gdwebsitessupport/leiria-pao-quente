@@ -3,21 +3,27 @@
 import { motion } from "framer-motion";
 import { CakeSlice, Coffee, Croissant, Wheat } from "lucide-react";
 import Image from "next/image";
-import type { Product } from "@/data/site";
-
-type ProductCardProps = {
-  product: Omit<Product, "icon">;
-};
 
 const icons = {
-  Pão: Wheat,
-  Croissants: Croissant,
-  Bolos: CakeSlice,
-  Café: Coffee,
+  cake: CakeSlice,
+  coffee: Coffee,
+  croissant: Croissant,
+  wheat: Wheat,
+};
+
+type ProductCardProps = {
+  product: {
+    name: string;
+    category: string;
+    description: string;
+    price: string;
+    image: string;
+    iconKey: string;
+  };
 };
 
 export function ProductCard({ product }: ProductCardProps) {
-  const Icon = icons[product.category as keyof typeof icons] ?? Wheat;
+  const Icon = icons[product.iconKey as keyof typeof icons] ?? Wheat;
 
   return (
     <motion.article

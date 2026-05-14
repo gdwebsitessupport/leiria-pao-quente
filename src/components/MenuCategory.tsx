@@ -13,25 +13,26 @@ import {
   Wheat,
 } from "lucide-react";
 
+const icons = {
+  cake: CakeSlice,
+  coffee: Coffee,
+  croissant: Croissant,
+  cup: CupSoda,
+  home: Home,
+  sandwich: Sandwich,
+  soup: Soup,
+  sparkles: Sparkles,
+  wheat: Wheat,
+};
+
 type MenuCategoryProps = {
+  iconKey: string;
   title: string;
   items: string[][];
 };
 
-const icons = {
-  Pão: Wheat,
-  Pastelaria: Sparkles,
-  Bolos: CakeSlice,
-  Croissants: Croissant,
-  Salgados: Sandwich,
-  "Pequenos-almoços": Home,
-  Cafetaria: Coffee,
-  Bebidas: CupSoda,
-  "Especialidades da casa": Soup,
-};
-
-export function MenuCategory({ title, items }: MenuCategoryProps) {
-  const Icon = icons[title as keyof typeof icons] ?? Wheat;
+export function MenuCategory({ iconKey, title, items }: MenuCategoryProps) {
+  const Icon = icons[iconKey as keyof typeof icons] ?? Wheat;
 
   return (
     <motion.article
