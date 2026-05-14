@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "../globals.css";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { BackToTopButton } from "@/components/BackToTopButton";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { getDictionary, getValidLocale } from "@/i18n/dictionaries";
 import { getLocalizedAlternates } from "@/i18n/metadata";
@@ -79,6 +80,10 @@ export default async function RootLayout({
           labels={dictionary.shell}
           locale={locale}
           navigation={dictionary.navigation}
+        />
+        <BackToTopButton
+          ariaLabel={dictionary.shell.backToTopAriaLabel}
+          label={dictionary.shell.backToTopLabel}
         />
       </body>
     </html>

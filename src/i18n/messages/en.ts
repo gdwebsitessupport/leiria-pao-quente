@@ -32,6 +32,8 @@ const dictionary = {
     openMenu: "Open menu",
     closeMenu: "Close menu",
     languageLabel: "Select language",
+    backToTopLabel: "Back to top",
+    backToTopAriaLabel: "Back to top of page",
   },
   openingHours: [
     { day: "Monday", hours: "06:00-19:30" },
