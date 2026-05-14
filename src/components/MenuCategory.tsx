@@ -36,7 +36,7 @@ export function MenuCategory({ iconKey, title, items }: MenuCategoryProps) {
 
   return (
     <motion.article
-      className="rounded-[1.75rem] border border-ink/10 bg-white p-5 shadow-[0_20px_60px_rgba(33,25,20,0.08)] md:p-6"
+      className="rounded-[1.75rem] border border-ink/10 bg-white p-5 shadow-[0_20px_60px_rgba(16,42,47,0.08)] md:p-6"
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}

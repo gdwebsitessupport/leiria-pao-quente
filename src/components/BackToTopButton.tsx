@@ -25,7 +25,7 @@ type BackToTopButtonProps = {
 };
 
 const defaultButtonClassName =
-  "group inline-flex h-12 items-center gap-2 rounded-full border border-olive/20 bg-cream/95 px-4 text-xs font-extrabold uppercase tracking-[0.14em] text-olive shadow-[0_10px_25px_rgba(33,25,20,0.18)] backdrop-blur transition hover:-translate-y-0.5 hover:border-honey hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honey focus-visible:ring-offset-2 focus-visible:ring-offset-cream";
+  "group inline-flex h-12 items-center gap-2 rounded-full border border-olive/20 bg-cream/95 px-4 text-xs font-extrabold uppercase tracking-[0.14em] text-olive shadow-[0_10px_25px_rgba(16,42,47,0.16)] backdrop-blur transition hover:-translate-y-0.5 hover:border-honey hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honey focus-visible:ring-offset-2 focus-visible:ring-offset-cream";
 
 const defaultPositionClassName = "bottom-5 right-4 sm:bottom-8 sm:right-6";
 

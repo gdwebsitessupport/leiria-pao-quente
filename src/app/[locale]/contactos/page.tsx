@@ -58,7 +58,7 @@ export default async function ContactosPage({ params }: LocalePageProps) {
       <MotionSection className="bg-flour px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-6">
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <article className="rounded-[2rem] bg-ink p-8 text-cream shadow-[0_24px_70px_rgba(33,25,20,0.18)] sm:p-10 lg:p-12">
+          <article className="rounded-[2rem] bg-ink p-8 text-cream shadow-[0_24px_70px_rgba(16,42,47,0.18)] sm:p-10 lg:p-12">
             <p className="inline-flex items-center gap-2 rounded-full border border-honey/40 bg-white/8 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.22em] text-honey">
               <MapPin className="h-4 w-4" aria-hidden="true" />
               {page.location.eyebrow}
@@ -103,7 +103,7 @@ export default async function ContactosPage({ params }: LocalePageProps) {
             </div>
           </article>
 
-          <article className="rounded-[2rem] border border-honey/35 bg-cream p-8 shadow-[0_24px_70px_rgba(33,25,20,0.08)] sm:p-10 lg:p-12">
+          <article className="rounded-[2rem] border border-honey/35 bg-cream p-8 shadow-[0_24px_70px_rgba(16,42,47,0.08)] sm:p-10 lg:p-12">
             <p className="inline-flex items-center gap-2 rounded-full border border-honey/35 bg-white/50 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.22em] text-caramel">
               <Clock className="h-4 w-4" aria-hidden="true" />
               {page.schedule.eyebrow}
@@ -125,7 +125,7 @@ export default async function ContactosPage({ params }: LocalePageProps) {
           </article>
           </div>
 
-          <article className="overflow-hidden rounded-[2rem] border border-honey/35 bg-cream shadow-[0_24px_70px_rgba(33,25,20,0.08)]">
+          <article className="overflow-hidden rounded-[2rem] border border-honey/35 bg-cream shadow-[0_24px_70px_rgba(16,42,47,0.08)]">
             <div className="border-b border-honey/35 px-8 py-6 sm:px-10">
               <h2 className="font-serif text-3xl font-bold leading-tight text-ink text-balance md:text-4xl">
                 Google Maps

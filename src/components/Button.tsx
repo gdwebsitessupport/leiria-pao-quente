@@ -22,7 +22,7 @@ const icons = {
 
 const variants = {
   primary:
-    "bg-olive text-cream shadow-[0_18px_40px_rgba(40,63,47,0.22)] hover:bg-ink",
+    "bg-olive text-cream shadow-[0_18px_40px_rgba(0,166,180,0.24)] hover:bg-ink",
   secondary:
     "border border-olive/20 bg-cream text-olive hover:border-honey hover:bg-white",
   light:

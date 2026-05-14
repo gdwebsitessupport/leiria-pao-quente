@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff8ec;
-  --foreground: #211914;
+  --background: #f4f7f8;
+  --foreground: #102a2f;
 }
 
 @theme inline {
@@ -10,14 +10,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-manrope);
   --font-serif: var(--font-cormorant);
-  --color-cream: #fff8ec;
-  --color-flour: #f6ead7;
-  --color-honey: #d6a34c;
-  --color-caramel: #a86634;
-  --color-terracotta: #b65236;
-  --color-olive: #283f2f;
-  --color-ink: #211914;
-  --color-stone: #6e5b4b;
+  --color-cream: #f4f7f8;
+  --color-flour: #e7edf0;
+  --color-honey: #67e8f9;
+  --color-caramel: #007c89;
+  --color-terracotta: #008f9e;
+  --color-olive: #00a6b4;
+  --color-ink: #102a2f;
+  --color-stone: #647173;
 }
 
 body {
@@ -27,8 +27,8 @@ body {
 }
 
 ::selection {
-  background: #d6a34c;
-  color: #211914;
+  background: #00a6b4;
+  color: #f4f7f8;
 }
 
 img {
@@ -41,8 +41,8 @@ img {
 
 .grain-overlay::after {
   background-image:
-    linear-gradient(rgba(255, 248, 236, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 248, 236, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(244, 247, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 247, 248, 0.08) 1px, transparent 1px);
   background-size: 42px 42px;
   content: "";
   inset: 0;
@@ -51,7 +51,7 @@ img {
 }
 
 .bakery-border {
-  background-image: linear-gradient(90deg, #d6a34c 33%, transparent 0);
+  background-image: linear-gradient(90deg, #00a6b4 33%, transparent 0);
   background-position: bottom;
   background-repeat: repeat-x;
   background-size: 16px 1px;

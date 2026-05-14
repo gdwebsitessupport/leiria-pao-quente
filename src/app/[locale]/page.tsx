@@ -53,7 +53,7 @@ export default async function Home({ params }: LocalePageProps) {
           className="object-cover opacity-72"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(33,25,20,0.86),rgba(33,25,20,0.42),rgba(33,25,20,0.22))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(16,42,47,0.86),rgba(16,42,47,0.42),rgba(16,42,47,0.22))]" />
 
         <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8">
           <MotionSection className="max-w-3xl">
@@ -85,7 +85,7 @@ export default async function Home({ params }: LocalePageProps) {
             return (
               <article
                 key={item.title}
-                className="rounded-[1.5rem] border border-ink/10 bg-white p-6 shadow-[0_18px_45px_rgba(33,25,20,0.07)] transition duration-300 hover:-translate-y-1 hover:border-honey/60"
+                className="rounded-[1.5rem] border border-ink/10 bg-white p-6 shadow-[0_18px_45px_rgba(16,42,47,0.07)] transition duration-300 hover:-translate-y-1 hover:border-honey/60"
               >
                 <Icon className="mb-5 h-7 w-7 text-terracotta" />
                 <h2 className="font-serif text-3xl font-bold text-ink">

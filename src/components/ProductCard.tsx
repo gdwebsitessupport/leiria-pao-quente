@@ -27,7 +27,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <motion.article
-      className="group overflow-hidden rounded-[2rem] border border-ink/10 bg-white shadow-[0_24px_70px_rgba(33,25,20,0.09)]"
+      className="group overflow-hidden rounded-[2rem] border border-ink/10 bg-white shadow-[0_24px_70px_rgba(16,42,47,0.09)]"
       whileHover={{ y: -8 }}
       transition={{ type: "spring", stiffness: 260, damping: 24 }}
     >

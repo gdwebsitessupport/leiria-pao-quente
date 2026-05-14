@@ -15,7 +15,7 @@ type TeamCardProps = {
 export function TeamCard({ member }: TeamCardProps) {
   return (
     <motion.article
-      className="group overflow-hidden rounded-[1.75rem] border border-ink/10 bg-white shadow-[0_22px_65px_rgba(33,25,20,0.08)]"
+      className="group overflow-hidden rounded-[1.75rem] border border-ink/10 bg-white shadow-[0_22px_65px_rgba(16,42,47,0.08)]"
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.22 }}

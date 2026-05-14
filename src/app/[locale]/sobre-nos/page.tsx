@@ -78,7 +78,7 @@ export default async function SobreNosPage({ params }: LocalePageProps) {
             return (
               <article
                 key={item.title}
-                className="rounded-[1.75rem] border border-ink/10 bg-white p-7 shadow-[0_20px_60px_rgba(33,25,20,0.08)]"
+                className="rounded-[1.75rem] border border-ink/10 bg-white p-7 shadow-[0_20px_60px_rgba(16,42,47,0.08)]"
               >
                 <Icon className="mb-6 h-8 w-8 text-terracotta" />
                 <h2 className="font-serif text-4xl font-bold text-ink">
