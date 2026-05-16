@@ -49,3 +49,5 @@ export function localizePath(href: string, locale: Locale) {
   const path = href === "/" ? "" : href;
   return `/${locale}${path}`;
 }
+
+export const localizeHref = localizePath;

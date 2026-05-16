@@ -1,30 +1,64 @@
 "use client";
 
 import Lenis from "lenis";
-import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
+
+type LenisWindow = Window & {
+  __lenis?: Lenis;
+};
 
 export function SmoothScroll() {
+  const pathname = usePathname();
+  const lenisRef = useRef<Lenis | null>(null);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.1,
       smoothWheel: true,
+      autoRaf: true,
+      autoResize: true,
     });
 
-    let frame = 0;
-    const raf = (time: number) => {
-      lenis.raf(time);
-      frame = requestAnimationFrame(raf);
+    lenisRef.current = lenis;
+    (window as LenisWindow).__lenis = lenis;
+
+    const syncSize = () => {
+      lenis.resize();
     };
 
-    frame = requestAnimationFrame(raf);
-    window.__lenis = lenis;
+    window.addEventListener("load", syncSize);
+    window.addEventListener("resize", syncSize);
+
+    const observer = new MutationObserver(() => {
+      lenis.resize();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+    });
 
     return () => {
-      delete window.__lenis;
-      cancelAnimationFrame(frame);
+      observer.disconnect();
+      window.removeEventListener("load", syncSize);
+      window.removeEventListener("resize", syncSize);
+      delete (window as LenisWindow).__lenis;
+      lenisRef.current = null;
       lenis.destroy();
     };
   }, []);
+
+  useEffect(() => {
+    const id = window.setTimeout(() => {
+      lenisRef.current?.resize();
+    }, 0);
+
+    return () => {
+      window.clearTimeout(id);
+    };
+  }, [pathname]);
 
   return null;
 }
