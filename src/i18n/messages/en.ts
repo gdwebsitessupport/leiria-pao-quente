@@ -56,7 +56,7 @@ const dictionary = {
         eyebrow: "Bakery and cafe in Pataias",
         title: "Fresh bread for simple days that taste better.",
         text: "On Avenida Rainha Santa Isabel, Pão Quente Duarte Silva brings together daily bakes, pastries, coffee, and simple meals in a warm, familiar setting.",
-        specialtiesCta: "See Specialties",
+        specialtiesCta: "See Menu",
         contactCta: "Contact Us",
       },
       highlights: [

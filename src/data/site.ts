@@ -1,4 +1,5 @@
 export const images = {
+  homeHero: "/images/Frente1.jpg",
   hero:
     "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=85&w=1800",
   counter:

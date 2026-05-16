@@ -55,7 +55,7 @@ const dictionary = {
         eyebrow: "Padaria e café em Pataias",
         title: "Pão fresco para os dias simples que sabem melhor.",
         text: "Na Avenida Rainha Santa Isabel, o Pão Quente Duarte Silva junta fornadas do dia, pastelaria, café e refeições simples num ambiente acolhedor e familiar.",
-        specialtiesCta: "Ver Especialidades",
+        specialtiesCta: "Ver Menu",
         contactCta: "Contactar",
       },
       highlights: [

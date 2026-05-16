@@ -46,7 +46,7 @@ export default async function Home({ params }: LocalePageProps) {
     <>
       <section className="grain-overlay relative min-h-[calc(100vh-5rem)] overflow-hidden bg-ink text-cream">
         <Image
-          src={images.hero}
+          src={images.homeHero}
           alt={page.hero.imageAlt}
           fill
           priority
