@@ -3,19 +3,6 @@
 import { ArrowUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
-type LenisLike = {
-  scrollTo: (
-    target: number | string | HTMLElement,
-    options?: { duration?: number; immediate?: boolean }
-  ) => void;
-};
-
-declare global {
-  interface Window {
-    __lenis?: LenisLike;
-  }
-}
-
 type BackToTopButtonProps = {
   ariaLabel: string;
   label: string;
@@ -62,11 +49,6 @@ export function BackToTopButton({
   }, [showAfter]);
 
   const scrollToTop = () => {
-    if (window.__lenis) {
-      window.__lenis.scrollTo(0, { duration: 1.05 });
-      return;
-    }
-
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 

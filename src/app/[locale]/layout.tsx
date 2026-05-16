@@ -4,7 +4,6 @@ import "../globals.css";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { BackToTopButton } from "@/components/BackToTopButton";
-import { SmoothScroll } from "@/components/SmoothScroll";
 import { getDictionary, getValidLocale } from "@/i18n/dictionaries";
 import { getLocalizedAlternates } from "@/i18n/metadata";
 import { localeConfig, locales } from "@/i18n/routing";
@@ -64,10 +63,9 @@ export default async function RootLayout({
     <html
       lang={localeConfig[locale].htmlLang}
       suppressHydrationWarning
-      className={`${manrope.variable} ${cormorant.variable} h-full scroll-smooth antialiased`}
+      className={`${manrope.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body suppressHydrationWarning className="flex min-h-full flex-col">
-        <SmoothScroll />
         <Navbar
           business={dictionary.business}
           labels={dictionary.shell}
