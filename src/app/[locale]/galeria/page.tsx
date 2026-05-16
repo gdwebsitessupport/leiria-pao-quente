@@ -48,7 +48,7 @@ export default async function GaleriaPage({ params }: LocalePageProps) {
             text={page.section.text}
           />
           <div className="mt-12">
-            <GalleryGrid items={page.items} />
+            <GalleryGrid items={page.items} labels={page.lightbox} />
           </div>
         </div>
       </MotionSection>
