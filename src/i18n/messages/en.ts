@@ -328,6 +328,9 @@ const dictionary = {
         { title: "Bread loaves", image: "/images/Paozoes.jpg" },
         { title: "Soup", image: "/images/Sopa2.jpg" },
         { title: "Stone soup", image: "/images/SopaPedra.jpg" },
+        { title: "Milk bread", image: "/images/Paodeleite.jpg" },
+        { title: "Cod fritter", image: "/images/PastelBacalhau.jpg" },
+        { title: "Snack", image: "/images/Snack.jpg" },
       ],
     },
     team: {

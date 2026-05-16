@@ -328,6 +328,9 @@ const dictionary = {
         { title: "Panado", image: "/images/Panado.jpg" },
         { title: "Sopa", image: "/images/Sopa2.jpg" },
         { title: "Sopa da pedra", image: "/images/SopaPedra.jpg" },
+        { title: "Pão de leite", image: "/images/Paodeleite.jpg" },
+        { title: "Pastel de bacalhau", image: "/images/PastelBacalhau.jpg" },
+        { title: "Snack", image: "/images/Snack.jpg" },
       ],
     },
     team: {
