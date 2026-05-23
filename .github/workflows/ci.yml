@@ -16,7 +16,7 @@ concurrency:
 jobs:
   verify:
     name: Lint and build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
 
     env:
       NEXT_PUBLIC_FIREBASE_API_KEY: ${{ secrets.NEXT_PUBLIC_FIREBASE_API_KEY }}
