@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   enable-auto-merge:
-    name: Enable patch auto-merge
+    name: Enable Dependabot auto-merge
     runs-on: ubuntu-latest
     if: >
       github.actor == 'dependabot[bot]' &&
@@ -27,13 +27,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Enable auto-merge for patch updates
-        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
+      - name: Enable auto-merge
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
         run: gh pr merge --auto --squash "$PR_URL"
-
-      - name: Leave minor and major updates manual
-        if: steps.metadata.outputs.update-type != 'version-update:semver-patch'
-        run: echo "Dependabot update type '${{ steps.metadata.outputs.update-type }}' requires manual review."
