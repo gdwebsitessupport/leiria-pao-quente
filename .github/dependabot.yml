@@ -1,0 +1,36 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+      time: "09:00"
+      timezone: "Europe/Lisbon"
+    open-pull-requests-limit: 3
+    labels:
+      - "dependencies"
+      - "dependabot"
+    groups:
+      npm-patch-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+      npm-minor-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+      time: "09:15"
+      timezone: "Europe/Lisbon"
+    labels:
+      - "dependencies"
+      - "dependabot"
